@@ -1,0 +1,220 @@
+@import "nord.css";
+
+:root {
+    --background-color: var(--nord0);
+    --accent-color1: var(--nord1);
+    --accent-color2: var(--nord2);
+    --accent-color3: var(--nord3);
+    --text-color: #FFFFFF;
+    --text-accent-color1: var(--nord4);
+    --text-accent-color2: var(--nord5);
+    --box-shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: auto;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+h1, h2 {
+    text-align: center;
+    padding: 24px 24px 0 24px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.flex-container-group {
+    margin: 24px;
+}
+
+.flex-container-group-cell {
+    min-width: 0;
+    flex: 100%;
+}
+
+.icon:hover {
+    fill: var(--text-accent-color2);
+}
+
+.chart-container {
+    height: 420px;
+    background-color: var(--accent-color1);
+    border-radius: 0.5rem;
+    box-shadow: 0px 5px 10px var(--box-shadow-color);
+    padding: 24px 12px;
+}
+
+.selectMenu {
+    align-items: center;
+    padding: 12px;
+    background-color: var(--accent-color1);
+    text-align: center;
+    box-shadow: 0px 5px 10px var(--box-shadow-color);
+    width: 100%;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    width: 360px;
+    text-align: center;
+    margin: 8px 48px;
+    position: center;
+    font-size: 16px;
+    color: #757575;
+    line-height: 24px;
+    height: 40px;
+    padding: 10px 10px 10px 20px;
+    background-color: var(--text-color);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 var(--box-shadow-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select:focus {
+    outline: none;
+}
+
+button {
+    width: 360px;
+    margin: 8px 48px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--nord10);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 var(--box-shadow-color);
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+    height: 40px;
+}
+
+button:hover {
+    background-color: var(--nord9);
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 12px 24px;
+    top: 0;
+    background-color: var(--accent-color1);
+    box-shadow: 0px 5px 10px var(--box-shadow-color);
+    position: fixed;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    position: relative;
+    display: block;
+    color: var(--text-accent-color1);
+    text-align: center;
+    overflow: visible;
+    padding: 8px 8px;
+    text-decoration: none;
+    transition: color 200ms ease-in-out;
+}
+
+li a:hover {
+    color: var(--text-color);
+}
+
+.active {
+    font-weight: 900;
+    color: var(--text-color);
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background: var(--accent-color1);
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px var(--box-shadow-color);
+}
+
+thead {
+    background-color: var(--accent-color1);
+    color: var(--text-color);
+}
+
+th {
+    font-weight: 600;
+}
+
+tbody {
+    background-color: var(--accent-color2);
+}
+th {
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+}
+
+th:hover {
+    background-color: var(--accent-color3)
+}
+
+td, th {
+    border: 1px solid var(--background-color);
+    border-left: none;
+    border-right: none;
+    padding: 8px;
+}
+tbody tr {
+    transition: background-color 200ms ease-in-out;
+}
+
+tbody tr:hover {
+    background-color: var(--accent-color3);
+}
+
+.info {
+    color: var(--text-accent-color2);
+    margin: auto;
+    text-align: center;
+    width: 500px;
+}
+
+footer {
+    background-color: var(--accent-color1);
+    color: var(--text-accent-color1);
+    position: relative;
+    text-align: left;
+    min-height: 48px;
+    margin-top: 48px;
+    padding: 16px 48px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataView - Forecast360</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://kit.fontawesome.com/8051060f36.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+</head>
+<body onload="search()">
+<ul>
+    <li style="float:left"><a href="index.html">Forecast360</a></li>
+    <li><a href="info.html">Info</a></li>
+    <li><a class="active" href="search.html">DataView</a></li>
+    <li><a href="wind-speed.html">Wind speed</a></li>
+    <li><a href="temperature.html">Temperature</a></li>
+    <li><a href="index.html">Recent measurements</a></li>
+</ul>
+<h2 style="text-align: center;padding-top:80px">DataView</h2>
+<div class="flex-container">
+    <div class="flex-container-group">
+        <div class="flex-container-group-cell">
+            <div class="chart-container">
+                <canvas id="searchChart"></canvas>
+            </div>
+            <div class="flex-container-group-cell" style="padding-top: 48px">
+                <div class="selectMenu">
+                    <label for="interval"><b>Select time interval</b></label>
+                    <select id="interval">
+                        <option value="">Now</option>
+                        <option value="23">24 hours</option>
+                        <option value="47">48 hours</option>
+                        <option value="71">72 hours</option>
+                        <option value="167">1 week</option>
+                    </select>
+                    <label for="data"><b>Select data</b></label>
+                    <select id="data">
+                        <option value="Air_pres_1">Air pressure</option>
+                        <option value="light">Light</option>
+                        <option value="rain">Rain</option>
+                        <option value="temperature">Temperature</option>
+                        <option value="wind_direction">Wind direction</option>
+                        <option value="wind_speed">Wind speed</option>
+                    </select>
+                    <button onclick="search()"><i class="fa-solid fa-paper-plane"></i> Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="table" class="flex-container-group">
+        <div class="flex-container-group-cell">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th onclick="sortTableNumerically(0)">Number <i class="fa-solid fa-sort"></i></th>
+                    <th onclick="sortTableAlphabetically(1)">Date <i class="fa-solid fa-sort"></i></th>
+                    <th onclick="sortTableAlphabetically(2)">Time <i class="fa-solid fa-sort"></i></th>
+                    <th onclick="sortTableNumerically(3)">Value <i class="fa-solid fa-sort"></i></th>
+                </tr>
+                </thead>
+                <tbody id="foundData"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<footer>
+    <p><i class="fa-solid fa-code"></i> Saveli Matjuhhin <br> <a style="color:var(--nord4);text-decoration: none" href="mailto:saveli.matjuhhin@tuni.fi"><i class="fa-solid fa-envelope"></i> saveli.matjuhhin@tuni.fi <br> </a><a style="color:var(--nord4);text-decoration: none" href="https://github.com/0CD" target=”_blank”><i class="fa-brands fa-github"></i> Github</a></p>
+</footer>
+<script src="scripts/search.js"></script>
+</body>
+</html>

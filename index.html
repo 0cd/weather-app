@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recent measurements - Forecast360</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://kit.fontawesome.com/8051060f36.js" crossorigin="anonymous"></script>
+</head>
+<body onload="latest30()">
+<ul>
+    <li style="float:left"><a href="index.html">Forecast360</a></li>
+    <li><a href="info.html">Info</a></li>
+    <li><a href="search.html">DataView</a></li>
+    <li><a href="wind-speed.html">Wind speed</a></li>
+    <li><a href="temperature.html">Temperature</a></li>
+    <li><a class="active" href="index.html">Recent measurements</a></li>
+</ul>
+<h2 style="text-align: center;padding-top:80px">Recent measurements</h2>
+<div class="flex-container">
+    <div id="table" class="flex-container-group">
+        <div class="flex-container-group-cell">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th onclick="sortTableNumerically(0)">Number <i class="fa-solid fa-sort"></i></th>
+                    <th onclick="sortTableAlphabetically(1)">Date <i class="fa-solid fa-sort"></i></th>
+                    <th onclick="sortTableAlphabetically(2)">Time <i class="fa-solid fa-sort"></i></th>
+                    <th onclick="sortTableAlphabetically(3)">Type <i class="fa-solid fa-sort"></i></th>
+                    <th onclick="sortTableNumerically(4)">Value <i class="fa-solid fa-sort"></i></th>
+                </tr>
+                </thead>
+                <tbody id="latest30"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<footer>
+    <p><i class="fa-solid fa-code"></i> Saveli Matjuhhin <br> <a style="color:var(--nord4);text-decoration: none" href="mailto:saveli.matjuhhin@tuni.fi"><i class="fa-solid fa-envelope"></i> saveli.matjuhhin@tuni.fi <br> </a><a style="color:var(--nord4);text-decoration: none" href="https://github.com/0CD" target=”_blank”><i class="fa-brands fa-github"></i> Github</a></p>
+</footer>
+<script src="scripts/index.js"></script>
+</body>
+</html>
